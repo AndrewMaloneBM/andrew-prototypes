@@ -2,6 +2,9 @@
 definePageMeta({ layout: false })
 
 const { hub } = useAppConfig()
+const runtimeConfig = useRuntimeConfig()
+const baseHref = (runtimeConfig.app.baseURL ?? '/').replace(/\/$/, '')
+const withBase = (path: string) => `${baseHref}${path}`
 
 const scrolled = ref(false)
 let scrollHandler: () => void
@@ -144,9 +147,9 @@ onUnmounted(() => {
                 <span class="wb-aside-label">Concepts</span>
                 <span class="wb-aside-value">{{ p.concepts.length }}</span>
               </div>
-              <NuxtLink :to="p.link" class="wb-aside-cta">
+              <a :href="withBase(p.link)" class="wb-aside-cta">
                 Open prototype <span class="wb-arrow">→</span>
-              </NuxtLink>
+              </a>
             </div>
           </div>
 
