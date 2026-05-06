@@ -144,9 +144,9 @@ onUnmounted(() => {
                 <span class="wb-aside-label">Concepts</span>
                 <span class="wb-aside-value">{{ p.concepts.length }}</span>
               </div>
-              <a :href="p.link" class="wb-aside-cta">
+              <NuxtLink :to="p.link" class="wb-aside-cta">
                 Open prototype <span class="wb-arrow">→</span>
-              </a>
+              </NuxtLink>
             </div>
           </div>
 
