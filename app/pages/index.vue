@@ -10,7 +10,7 @@ const scrolled = ref(false)
 let scrollHandler: () => void
 
 useHead({
-  title: `${hub.teamName} — Prototype Hub`,
+  title: `${hub.teamName} Prototype Hub`,
   link: [
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
@@ -95,7 +95,7 @@ onUnmounted(() => {
   <main class="wb-main">
 
     <header class="wb-header">
-      <h1 class="wb-title"><span class="wb-title-prefix">{{ hub.teamName }} —</span><br><em>Prototype</em> Hub</h1>
+      <h1 class="wb-title"><span class="wb-title-prefix">{{ hub.teamName }}</span><br><em>Prototype</em> Hub</h1>
     </header>
 
     <section class="wb-section">
